@@ -26,6 +26,7 @@ import { useState } from "react";
         {expanded && (
           <>
             <p className="text-sm text-gray-700 mb-4">{place.description || "No description provided."}</p>
+            <p className="text-sm text-gray-700 mb-4">{place.message}</p>
             {place.activities && (
               <ul className="text-sm text-gray-600 list-disc list-inside mb-4">
                 {place.activities.map((activity, idx) => (
