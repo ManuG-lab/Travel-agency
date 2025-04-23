@@ -1,0 +1,55 @@
+{
+    "destinations": [
+        {
+            "id": 1,
+            "name": "Paris",
+            "country": "France",
+            "description": "The city of lights, known for its art, fashion, and culture.",
+            "image": "https://example.com/paris.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Tokyo",
+            "country": "Japan",
+            "description": "A bustling metropolis known for its modern architecture and rich history.",
+            "image": "https://example.com/tokyo.jpg"
+        }
+    ],
+    "bookings": [
+        {
+            "id": 1,
+            "destinationId": 1,
+            "userId": 1,
+            "date": "2023-10-01",
+            "status": "confirmed"
+        },
+        {
+            "id": 2,
+            "destinationId": 2,
+            "userId": 2,
+            "date": "2023-11-15",
+            "status": "pending"
+        }
+    ],
+    "users": [
+        {
+          "id": 1,
+          "username": "admin",
+          "password": "admin123",
+          "role": "admin"
+        },
+        {
+          "id": 2,
+          "username": "romeo",
+          "password": "pass123",
+          "role": "user"
+        }
+      ],
+      "admin": [
+        {
+          "id": 1,
+          "username": "admin",
+            "password": "admin123"
+        }
+    ]
+}
