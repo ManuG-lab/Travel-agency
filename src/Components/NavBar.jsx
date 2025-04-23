@@ -9,7 +9,8 @@ import { Link } from 'react-router-dom';
         </div>
         
         <div className="space-x-6">
-          <Link to="/home" className="hover:text-gray-300">Home</Link>
+          <Link to="/" className="hover:text-gray-300">Home</Link>
+            <Link to="/destinations" className="hover:text-gray-300">Destinations</Link>
           <Link to="/about" className="hover:text-gray-300">About</Link>
           <Link to="/contact" className="hover:text-gray-300">Contact</Link>
           <Link to="/my-bookings" className="hover:text-gray-300">My Bookings</Link>

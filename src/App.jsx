@@ -7,6 +7,7 @@ import Bookings from "./Pages/Bookings";
 import Contact from "./Pages/Contact";
 import About from "./Pages/About";
 import Footer from "./Components/Footer";
+import Destinations from "./Pages/Destinations";
 
 function App(){
   return(
@@ -15,6 +16,7 @@ function App(){
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/destinations" element={<Destinations />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/my-bookings" element={<Bookings />} />
