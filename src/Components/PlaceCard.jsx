@@ -21,7 +21,7 @@ import { useState } from "react";
       <div className="p-4">
         <h2 className="text-xl font-semibold mb-1">{place.name}</h2>
         <p className="text-gray-600 mb-2">{place.country}</p>
-        <p className="text-purple-700 font-bold text-lg mb-4">${place.price} Per Person</p>
+        <p className="text-purple-700 font-bold text-lg mb-4">${place.price} Per Person (4 Nights)</p>
 
         {expanded && (
           <>

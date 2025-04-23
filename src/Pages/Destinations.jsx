@@ -15,7 +15,29 @@ function Destinations() {
   
     const handleBook = (place) => {
       alert(`You booked: ${place.name}`);
-      // Here you can send the booking to your backend using fetch()
+        const bookingData = {
+            name: place.name,
+            country: place.country,
+            price: place.price,
+            image: place.image,
+            description: place.description,
+        };
+        fetch("http://localhost:3000/bookings", {
+          method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(bookingData)
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            alert("Booking successful!");
+        })
+        .catch((err) => {
+            console.error("Failed to book place", err);
+            alert("Booking failed. Please try again.");
+        });
+    
     };
   
     return (

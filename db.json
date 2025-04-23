@@ -282,20 +282,7 @@
     }
   ],
   "bookings": [
-    {
-      "id": 1,
-      "destinationId": 1,
-      "userId": 1,
-      "date": "2023-10-01",
-      "status": "confirmed"
-    },
-    {
-      "id": 2,
-      "destinationId": 2,
-      "userId": 2,
-      "date": "2023-11-15",
-      "status": "pending"
-    }
+
   ],
   "admin": [
     {
@@ -304,7 +291,5 @@
       "password": "admin123"
     }
   ],
-  "messeges": [
-    
-  ]
+  "messeges": []
 }
