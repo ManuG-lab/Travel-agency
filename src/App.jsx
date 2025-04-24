@@ -9,9 +9,9 @@ import Contact from "./Pages/Contact";
 import About from "./Pages/About";
 import Footer from "./Components/Footer";
 import Destinations from "./Pages/Destinations";
-import AdminRoute from "./Components/AdminRoute";
-import AdminLogin from "./Pages/AdminLogin";
-import AdminDashboard from "./Pages/AdminDashboard";
+import AdminRoute from "./Admin/AdminRoute";
+import AdminLogin from "./Admin/AdminLogin";
+import AdminDashboard from "./Admin/AdminDashboard";
 
 function App(){
 const [isAdmin, setIsAdmin] = useState(false);
