@@ -1,7 +1,7 @@
 {
   "destinations": [
     {
-      "id": 1,
+      "id":1,
       "name": "Paris",
       "country": "France",
       "description": "The city of lights, known for its art, fashion, and culture.",
@@ -279,20 +279,6 @@
         "Beach Parties"
       ],
       "message": "Package inclusive of accomodation and tour guides."
-    },
-    {
-      "id": "8cf3",
-      "name": "Kisii",
-      "country": "Kenya",
-      "description": "Full of crazy people",
-      "image": "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "price": "10000",
-      "activities": [
-        "swimming",
-        "fishing",
-        "dancing"
-      ],
-      "message": "Package inclusive of tour guides and accommodation"
     }
   ],
   "bookings": [
