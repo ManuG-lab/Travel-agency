@@ -1,5 +1,6 @@
 import React from "react";
 import PlaceCard from "../Components/PlaceCard";
+import Navbar from "../Components/NavBar";
 import { useState } from "react";
 import { useEffect } from "react";
 import { toast } from "react-toastify";
@@ -35,6 +36,8 @@ function Destinations() {
     };
   
     return (
+      <div>
+        <Navbar />
       <div className="min-h-screen p-6 bg-gray-100">
         <h1 className="text-3xl font-bold mb-6 text-center">Available Destinations</h1>
         <div className="flex flex-wrap gap-6 justify-center">
@@ -43,6 +46,7 @@ function Destinations() {
           ))}
         </div>
       </div>
+      /</div>
     );
   
 }

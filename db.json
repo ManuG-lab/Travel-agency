@@ -279,14 +279,6 @@
         "Beach Parties"
       ],
       "message": "Package inclusive of accomodation and tour guides."
-    },
-    {
-      "id": "bd42",
-      "name": "Nairobi",
-      "country": "Kenya",
-      "description": "metropolis",
-      "image": "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "price": "1000"
     }
   ],
   "bookings": [

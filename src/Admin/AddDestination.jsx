@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import AdminNavbar from "./AdminNavBar";
 
 function AddDestinationForm({ onAdd }) {
   const [formData, setFormData] = useState({
@@ -34,11 +35,14 @@ function AddDestinationForm({ onAdd }) {
           description: "",
           image: "",
           price: "",
+          activities: "",
         });
       });
   };
 
   return (
+    <div>
+    <AdminNavbar />
     <form onSubmit={handleSubmit} className="bg-purple-100 p-4 rounded shadow">
       <h2 className="text-xl font-semibold mb-3 text-purple-700">Add New Destination</h2>
       <input
@@ -82,10 +86,20 @@ function AddDestinationForm({ onAdd }) {
         placeholder="Price"
         required
       />
+      <input 
+        name="activities"
+        type="text"
+        value={formData.activities}
+        onChange={handleChange}
+        className="mb-2 p-2 w-full border rounded"
+        placeholder="Activities"
+        required 
+        />
       <button className="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800">
         Add Destination
       </button>
     </form>
+    </div>
   );
 }
 

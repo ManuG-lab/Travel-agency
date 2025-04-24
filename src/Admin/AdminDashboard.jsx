@@ -33,8 +33,6 @@ function AdminDashboard() {
 
   return (
     <div className="p-6">
-      <h1 className="text-3xl font-bold mb-4 text-purple-700">Admin Dashboard</h1>
-
       <AddDestinationForm onAdd={handleAdd} />
 
       <div className="mt-6">

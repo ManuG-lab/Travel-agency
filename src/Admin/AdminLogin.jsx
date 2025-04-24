@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import Navbar from "../Components/NavBar";
 
 function AdminLogin({setIsAdmin}){
     const [username, setUsername] = useState("")
@@ -17,7 +18,7 @@ function AdminLogin({setIsAdmin}){
             const admin = data.find((admin) => admin.username === username && admin.password === password)
             if(admin){
                 setIsAdmin(true)
-                navigate("/admin")
+                navigate("/admin/admindashboard")
                 toast.success("Login successful")
             }else{
                toast.error("Invalid username or password")
@@ -26,6 +27,8 @@ function AdminLogin({setIsAdmin}){
     }
 
     return(
+        <div>
+            <Navbar />
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
             <form onSubmit={handleLogin} className="bg-white p-6 rounded shadow-md w-80">
                 <h2 className="text-2xl font-bold mb-4 text-center text-purple-700">Admin Login</h2>
@@ -34,6 +37,7 @@ function AdminLogin({setIsAdmin}){
                 <button type="submit" className="w-full bg-purple-700 text-white py-2 rounded hover:bg-purple-800 transition duration-300">Login</button>
             </form>
         </div>
+        /</div>
     )
 }
 

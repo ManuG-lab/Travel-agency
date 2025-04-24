@@ -1,9 +1,10 @@
 import React from "react";
+import Navbar from "../Components/NavBar";
 
  function Landing() {
     return (
         <div>
-        
+        <Navbar />
         <div
         className="min-h-screen bg-cover bg-center flex flex-col justify-center items-center text-white text-center p-6"
         style={{

@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import Navbar from "../Components/NavBar";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -42,6 +43,8 @@ function Contact() {
   };
 
   return (
+    <div>
+    <Navbar />
     <div className="min-h-screen bg-white px-6 py-12 flex items-center justify-center">
       <div className="w-full max-w-2xl bg-gray-50 p-8 rounded-xl shadow-md">
         <h2 className="text-3xl font-bold text-purple-700 mb-6 text-center">
@@ -96,6 +99,7 @@ function Contact() {
           </button>
         </form>
       </div>
+    </div>
     </div>
   );
 }

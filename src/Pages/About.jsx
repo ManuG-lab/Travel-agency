@@ -1,8 +1,11 @@
 import React from "react";
+import Navbar from "../Components/NavBar";
 
 
  function About() {
     return (
+      <div>
+      <Navbar />
       <div className="min-h-screen bg-white py-12 px-6">
         <h1 className="text-4xl font-bold text-purple-700 text-center mb-10">About Us </h1>
         {/* About Section */}
@@ -100,6 +103,7 @@ import React from "react";
             ))}
           </div>
         </div>
+      </div>
       </div>
     );
   }

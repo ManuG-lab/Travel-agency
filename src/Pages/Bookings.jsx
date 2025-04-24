@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import Navbar from "../Components/NavBar";
 
  function Bookings() {
   const [bookings, setBookings] = useState([]);
@@ -84,7 +85,10 @@ function handleConfirm(booking){
 
 
   return (
+    <div>
+      <Navbar />
     <div className="min-h-screen p-6 bg-gray-50">
+      
       <h1 className="text-3xl font-bold mb-6 text-center text-purple-700">My Bookings</h1>
 
       {loading ? (
@@ -161,6 +165,7 @@ function handleConfirm(booking){
     )}
 
    
+  </div>
   </div>
 );
 }
