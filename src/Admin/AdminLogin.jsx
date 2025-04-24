@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useState,useEffect } from "react";
+import { useState } from "react";
 import { toast } from "react-toastify";
 
 function AdminLogin({setIsAdmin}){
@@ -18,6 +18,7 @@ function AdminLogin({setIsAdmin}){
             if(admin){
                 setIsAdmin(true)
                 navigate("/admin")
+                toast.success("Login successful")
             }else{
                toast.error("Invalid username or password")
             }
