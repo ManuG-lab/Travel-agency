@@ -1,8 +1,10 @@
+import { parse } from "postcss";
 import React, { useEffect, useState } from "react";
 
  function Bookings() {
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [formValues, setFormValues] = useState({});
 
   useEffect(() => {
     fetch("http://localhost:3000/bookings")
@@ -26,10 +28,10 @@ import React, { useEffect, useState } from "react";
     })
       .then((res) => {
         if (!res.ok) throw new Error("Failed to remove booking");
-        return res.json(); // You can also just call `.then(() => { ... })` if no response body
+        return res.json();
       })
       .then(() => {
-        // Remove booking from UI
+        // Remove booking from page
         setBookings((prevBookings) =>
           prevBookings.filter((booking) => booking.id !== id)
         );
@@ -38,6 +40,16 @@ import React, { useEffect, useState } from "react";
         console.error("Error removing booking:", err);
       });
   };
+
+  function handleFormChange(id, field, value){
+    setFormValues((prev) => ({
+      ...prev,
+      [id]: {
+        ...prev[id],
+        [field]: value,
+      },
+    }));
+  }
 
 
   return (
@@ -50,7 +62,12 @@ import React, { useEffect, useState } from "react";
         <p className="text-center text-gray-600">You have no bookings yet.</p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center">
-          {bookings.map((booking) => (
+        {bookings.map((booking) => {
+          const form = formValues[booking.id] || {};
+          const peopleCount = parseInt(form.people || 1);
+          const totalPrice = booking.price * peopleCount;
+
+          return (
             <div
               key={booking.id}
               className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300"
@@ -66,14 +83,61 @@ import React, { useEffect, useState } from "react";
                 <p className="text-gray-600 mt-1">{booking.description}</p>
                 <p className="text-gray-600 mt-2">Package: 3 Nights + Tour Guide</p>
                 <p className="text-purple-600 font-medium mt-2">Price Per Person: ${booking.price}</p>
+
+                {/* Booking Form */}
+                <form className="mt-4 space-y-2">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    value={form.name || ""}
+                    onChange={(e) => handleFormChange(booking.id, "name", e.target.value)}
+                    className="w-full border px-3 py-2 rounded"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    value={form.email || ""}
+                    onChange={(e) => handleFormChange(booking.id, "email", e.target.value)}
+                    className="w-full border px-3 py-2 rounded"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    value={form.phone || ""}
+                    onChange={(e) => handleFormChange(booking.id, "phone", e.target.value)}
+                    className="w-full border px-3 py-2 rounded"
+                  />
+                  <input
+                    type="number"
+                    min="1"
+                    placeholder="Number of People"
+                    value={form.people || 1}
+                    onChange={(e) => handleFormChange(booking.id, "people", e.target.value)}
+                    className="w-full border px-3 py-2 rounded"
+                  />
+                </form>
+
+                <p className="mt-2 font-bold text-green-600">
+                  Total Price: ${totalPrice}
+                </p>
               </div>
-              <button onClick={() => handleRemove(booking.id)} className="w-full bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800 transition">Remove</button>
+              <button
+                onClick={() => handleRemove(booking.id)}
+                className="w-full bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800 transition"
+              >
+                Remove
+              </button>
             </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
+          );
+        })}
+      </div>
+    )}
+
+    <button className="mt-10 w-full bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800 transition">
+      Confirm Booking
+    </button>
+  </div>
+);
 }
 
 export default Bookings;

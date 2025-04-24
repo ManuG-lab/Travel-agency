@@ -281,7 +281,24 @@
       "message": "Package inclusive of accomodation and tour guides."
     }
   ],
-  "bookings": [],
+  "bookings": [
+    {
+      "id": "6a9b",
+      "name": "New York",
+      "country": "USA",
+      "price": 2000,
+      "image": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "The city that never sleeps, famous for its skyline and cultural diversity."
+    },
+    {
+      "id": "ce67",
+      "name": "Sydney",
+      "country": "Australia",
+      "price": 1800,
+      "image": "https://images.pexels.com/photos/1586046/pexels-photo-1586046.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "Known for its Sydney Opera House and beautiful beaches."
+    }
+  ],
   "admin": [
     {
       "id": 1,
