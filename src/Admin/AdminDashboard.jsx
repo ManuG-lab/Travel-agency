@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import EditDestinationForm from "./EditDestination";
 import AddDestinationForm from "./AddDestination";
+import AdminNavbar from "./AdminNavBar";
 
 function AdminDashboard() {
   const [destinations, setDestinations] = useState([]);
@@ -27,47 +28,10 @@ function AdminDashboard() {
     setEditing(null);
   };
 
-  const handleAdd = (newDestination) => {
-    setDestinations((prev) => [...prev, newDestination]);
-  };
-
+ 
   return (
-    <div className="p-6">
-      <AddDestinationForm onAdd={handleAdd} />
-
-      <div className="mt-6">
-        {destinations.map((destination) =>
-          editing === destination.id ? (
-            <EditDestinationForm
-              key={destination.id}
-              destination={destination}
-              onUpdate={handleUpdate}
-            />
-          ) : (
-            <div
-              key={destination.id}
-              className="bg-white p-4 mb-4 shadow rounded"
-            >
-              <h2 className="text-xl font-semibold">{destination.name}</h2>
-              <p>{destination.country}</p>
-              <div className="flex gap-4 mt-2">
-                <button
-                  onClick={() => setEditing(destination.id)}
-                  className="bg-blue-500 text-white px-3 py-1 rounded"
-                >
-                  Edit
-                </button>
-                <button
-                  onClick={() => handleDelete(destination.id)}
-                  className="bg-red-500 text-white px-3 py-1 rounded"
-                >
-                  Delete
-                </button>
-              </div>
-            </div>
-          )
-        )}
-      </div>
+    <div>
+      <AdminNavbar />
     </div>
   );
 }

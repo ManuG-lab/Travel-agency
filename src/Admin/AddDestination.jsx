@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import AdminNavbar from "./AdminNavBar";
 
-function AddDestinationForm({ onAdd }) {
+function AddDestinationForm({ onAdd  }) {
+  const [destinations, setDestinations] = useState([]);
   const [formData, setFormData] = useState({
     name: "",
     country: "",
@@ -17,8 +18,14 @@ function AddDestinationForm({ onAdd }) {
     }));
   };
 
+  const handleAdd = (newDestination) => {
+    setDestinations((prev) => [...prev, newDestination]);
+  };
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    handleAdd()
     fetch("http://localhost:3000/destinations", {
       method: "POST",
       headers: {
@@ -28,16 +35,17 @@ function AddDestinationForm({ onAdd }) {
     })
       .then((res) => res.json())
       .then((newDestination) => {
-        onAdd(newDestination);
+        handleAdd(newDestination);
         setFormData({
           name: "",
           country: "",
           description: "",
           image: "",
           price: "",
-          activities: "",
+          activities: [],
         });
       });
+
   };
 
   return (

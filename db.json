@@ -279,16 +279,42 @@
         "Beach Parties"
       ],
       "message": "Package inclusive of accomodation and tour guides."
+    },
+    {
+      "id": "c55d",
+      "name": "Kisumu",
+      "country": "Kenya",
+      "description": "Lake Victoria",
+      "image": "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "price": "10000",
+      "activities": "Swimming fishing"
+    },
+    {
+      "id": "7093",
+      "name": "Moyale",
+      "country": "Kenya",
+      "description": "dry",
+      "image": "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "price": "20000",
+      "activities": "sand"
     }
   ],
   "bookings": [
     {
-      "id": "1e1f",
-      "name": "New York",
-      "country": "USA",
-      "price": 2000,
-      "image": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "description": "The city that never sleeps, famous for its skyline and cultural diversity."
+      "id": "f008",
+      "name": "Buenos Aires",
+      "country": "Argentina",
+      "price": 1400,
+      "image": "https://images.pexels.com/photos/31731055/pexels-photo-31731055/free-photo-of-colorful-fishing-boats-in-mar-del-plata-harbor.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "Known for its European-style architecture and rich cultural life."
+    },
+    {
+      "id": "7b40",
+      "name": "Kisumu",
+      "country": "Kenya",
+      "price": "10000",
+      "image": "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "Lake Victoria"
     }
   ],
   "admin": [
@@ -308,28 +334,16 @@
   ],
   "confirmed": [
     {
-      "id": "b597",
-      "name": "New York",
-      "email": "ggg@gggg",
-      "phone": "14254765321",
-      "people": 10,
-      "totalPrice": 20000,
-      "country": "USA",
-      "price": 2000,
-      "image": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "description": "The city that never sleeps, famous for its skyline and cultural diversity."
-    },
-    {
-      "id": "1e1f",
-      "name": "New York",
-      "email": "zxccnhmgffd@fcgvmbv",
-      "phone": "213456789",
-      "people": 4,
-      "totalPrice": 8000,
-      "country": "USA",
-      "price": 2000,
-      "image": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "description": "The city that never sleeps, famous for its skyline and cultural diversity."
+      "id": "f008",
+      "name": "Buenos Aires",
+      "email": "sadfghgf@dsfghgfd",
+      "phone": "sdrtfyuytr",
+      "people": 2,
+      "totalPrice": 2800,
+      "country": "Argentina",
+      "price": 1400,
+      "image": "https://images.pexels.com/photos/31731055/pexels-photo-31731055/free-photo-of-colorful-fishing-boats-in-mar-del-plata-harbor.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "Known for its European-style architecture and rich cultural life."
     }
   ]
 }
