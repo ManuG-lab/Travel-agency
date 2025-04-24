@@ -281,40 +281,28 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": "c55d",
-      "name": "Kisumu",
+      "id": "8cf3",
+      "name": "Kisii",
       "country": "Kenya",
-      "description": "Lake Victoria",
+      "description": "Full of crazy people",
       "image": "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
       "price": "10000",
-      "activities": "Swimming fishing"
-    },
-    {
-      "id": "7093",
-      "name": "Moyale",
-      "country": "Kenya",
-      "description": "dry",
-      "image": "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "price": "20000",
-      "activities": "sand"
+      "activities": [
+        "swimming",
+        "fishing",
+        "dancing"
+      ],
+      "message": "Package inclusive of tour guides and accommodation"
     }
   ],
   "bookings": [
     {
-      "id": "f008",
-      "name": "Buenos Aires",
-      "country": "Argentina",
-      "price": 1400,
-      "image": "https://images.pexels.com/photos/31731055/pexels-photo-31731055/free-photo-of-colorful-fishing-boats-in-mar-del-plata-harbor.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "description": "Known for its European-style architecture and rich cultural life."
-    },
-    {
-      "id": "7b40",
-      "name": "Kisumu",
+      "id": "3f8e",
+      "name": "Kisii",
       "country": "Kenya",
       "price": "10000",
       "image": "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "description": "Lake Victoria"
+      "description": "Full of crazy people"
     }
   ],
   "admin": [
@@ -334,16 +322,16 @@
   ],
   "confirmed": [
     {
-      "id": "f008",
-      "name": "Buenos Aires",
-      "email": "sadfghgf@dsfghgfd",
-      "phone": "sdrtfyuytr",
-      "people": 2,
-      "totalPrice": 2800,
-      "country": "Argentina",
-      "price": 1400,
-      "image": "https://images.pexels.com/photos/31731055/pexels-photo-31731055/free-photo-of-colorful-fishing-boats-in-mar-del-plata-harbor.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "description": "Known for its European-style architecture and rich cultural life."
+      "id": "3f8e",
+      "name": "Kisii",
+      "email": "asdfghfd@sdfghgfd",
+      "phone": "1234567",
+      "people": 10,
+      "totalPrice": 100000,
+      "country": "Kenya",
+      "price": "10000",
+      "image": "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "Full of crazy people"
     }
   ]
 }
