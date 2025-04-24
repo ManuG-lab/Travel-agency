@@ -51,6 +51,43 @@ import React, { useEffect, useState } from "react";
     }));
   }
 
+function handleConfirm(booking){
+    const form = formValues[booking.id]
+    if(!form || !form.name || !form.email || !form.phone || !form.people){
+        alert("Please fill in all fields");
+        return;
+    }
+
+    const peopleCount = parseInt(form.people);
+    const confirmedBooking = {
+        
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        people: peopleCount,
+        totalPrice: booking.price * peopleCount,
+        ...booking
+    }
+
+    fetch("http://localhost:3000/confirmed", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(confirmedBooking),
+    })
+    .then((res) => {
+        if (!res.ok) throw new Error("Failed to confirm booking");
+        return res.json();
+    })
+    .then(() => {
+        alert("Booking confirmed!");
+        setBookings((prevBookings) =>
+          prevBookings.filter((booking) => booking.id !== booking.id)
+        );
+    })
+}
+
 
   return (
     <div className="min-h-screen p-6 bg-gray-50">
@@ -121,21 +158,15 @@ import React, { useEffect, useState } from "react";
                   Total Price: ${totalPrice}
                 </p>
               </div>
-              <button
-                onClick={() => handleRemove(booking.id)}
-                className="w-full bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800 transition"
-              >
-                Remove
-              </button>
+              <button onClick={() => handleRemove(booking.id)}className="w-full bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800 transition">Remove</button>
+              <button onClick={() => handleConfirm(booking)} className="mt-2 w-full bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800 transition">Confirm Booking</button>
             </div>
           );
         })}
       </div>
     )}
 
-    <button className="mt-10 w-full bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800 transition">
-      Confirm Booking
-    </button>
+   
   </div>
 );
 }
