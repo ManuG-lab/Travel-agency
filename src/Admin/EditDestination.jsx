@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 function EditDestinationForm(){
     const [destinations, setDestinations] = useState([]);
-    const [editingId, setEditingId] = useState(null);
+    const [editingId, setEditingId] = useState();
     const [formData, setFormData] = useState({
       name: "",
       country: "",
@@ -65,10 +65,12 @@ function EditDestinationForm(){
       };
   
       fetch(`http://localhost:3000/destinations/${editingId}`, {
+        
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedData),
       })
+
       .then(async(res) => {
         if (!res.ok) {
           return res.text().then((text) => {

@@ -1,12 +1,12 @@
 {
   "destinations": [
     {
-      "id":1,
+      "id": "1",
       "name": "Paris",
       "country": "France",
       "description": "The city of lights, known for its art, fashion, and culture.",
       "image": "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "price": 1200,
+      "price": 12000,
       "activities": [
         "Skiing",
         "Cultural Festivals",
@@ -15,7 +15,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Tokyo",
       "country": "Japan",
       "description": "A bustling metropolis known for its modern architecture and rich history.",
@@ -29,7 +29,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "New York",
       "country": "USA",
       "description": "The city that never sleeps, famous for its skyline and cultural diversity.",
@@ -43,7 +43,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Sydney",
       "country": "Australia",
       "description": "Known for its Sydney Opera House and beautiful beaches.",
@@ -57,7 +57,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Cairo",
       "country": "Egypt",
       "description": "Famous for its ancient civilization and some of the world's most famous monuments.",
@@ -71,7 +71,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Rio de Janeiro",
       "country": "Brazil",
       "description": "Known for its Copacabana beach and the Christ the Redeemer statue.",
@@ -85,7 +85,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Rome",
       "country": "Italy",
       "description": "Known for its nearly 3,000 years of globally influential art, architecture, and culture.",
@@ -99,7 +99,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Bangkok",
       "country": "Thailand",
       "description": "Known for ornate shrines and vibrant street life.",
@@ -113,7 +113,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Dubai",
       "country": "UAE",
       "description": "Known for luxury shopping, ultramodern architecture, and a lively nightlife scene.",
@@ -127,7 +127,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Istanbul",
       "country": "Turkey",
       "description": "Known for its historic sites and vibrant culture.",
@@ -141,7 +141,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Barcelona",
       "country": "Spain",
       "description": "Known for its art and architecture.",
@@ -155,7 +155,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "London",
       "country": "UK",
       "description": "Known for its history, culture, and iconic landmarks.",
@@ -169,7 +169,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Moscow",
       "country": "Russia",
       "description": "Known for its historical and architectural landmarks.",
@@ -183,7 +183,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Singapore",
       "country": "Singapore",
       "description": "Known for its cleanliness, safety, and modern architecture.",
@@ -197,7 +197,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Seoul",
       "country": "South Korea",
       "description": "Known for its pop culture, technology, and rich history.",
@@ -211,7 +211,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Los Angeles",
       "country": "USA",
       "description": "Known for its entertainment industry and beautiful beaches.",
@@ -225,7 +225,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Hong Kong",
       "country": "China",
       "description": "Known for its skyline and deep natural harbor.",
@@ -239,7 +239,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Amsterdam",
       "country": "Netherlands",
       "description": "Known for its artistic heritage, elaborate canal system, and narrow houses.",
@@ -253,7 +253,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Buenos Aires",
       "country": "Argentina",
       "description": "Known for its European-style architecture and rich cultural life.",
@@ -267,7 +267,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Mumbai",
       "country": "India",
       "description": "Known for its Bollywood film industry and vibrant culture.",
@@ -293,7 +293,7 @@
   ],
   "admin": [
     {
-      "id": 1,
+      "id": "1",
       "username": "admin",
       "password": "admin123"
     }
