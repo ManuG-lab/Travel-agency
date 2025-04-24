@@ -20,25 +20,25 @@ import React, { useEffect, useState } from "react";
       });
   }, []);
 
-    const handleRemove = (bookings) => {
-        console.log("Removing booking with ID:",bookings.id);
-        fetch("http://localhost:3000/bookings" + bookings.id, {
-            method: "DELETE",
-        })
-            .then((res) => {
-            if (!res.ok) throw new Error("Failed to remove booking");
-            return res.json();
-            })
-            .then(() => {
-            setBookings((prevBookings) =>
-                prevBookings.filter((booking) => booking.id !== id)
-            );
-            })
-            .catch((err) => {
-            console.error("Error removing booking:", err);
-            });
+  const handleRemove = (id) => {
+    fetch(`http://localhost:3000/bookings/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to remove booking");
+        return res.json(); // You can also just call `.then(() => { ... })` if no response body
+      })
+      .then(() => {
+        // Remove booking from UI
+        setBookings((prevBookings) =>
+          prevBookings.filter((booking) => booking.id !== id)
+        );
+      })
+      .catch((err) => {
+        console.error("Error removing booking:", err);
+      });
+  };
 
-    }
 
   return (
     <div className="min-h-screen p-6 bg-gray-50">
@@ -67,7 +67,7 @@ import React, { useEffect, useState } from "react";
                 <p className="text-gray-600 mt-2">Package: 3 Nights + Tour Guide</p>
                 <p className="text-purple-600 font-medium mt-2">Price Per Person: ${booking.price}</p>
               </div>
-              <button onClick={handleRemove} className="w-full bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800 transition">Remove</button>
+              <button onClick={() => handleRemove(booking.id)} className="w-full bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800 transition">Remove</button>
             </div>
           ))}
         </div>
