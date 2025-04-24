@@ -1,5 +1,5 @@
-import { parse } from "postcss";
 import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
  function Bookings() {
   const [bookings, setBookings] = useState([]);
@@ -9,7 +9,6 @@ import React, { useEffect, useState } from "react";
   useEffect(() => {
     fetch("http://localhost:3000/bookings")
       .then((res) => {
-        if (!res.ok) throw new Error("Failed to fetch bookings");
         return res.json();
       })
       .then((data) => {
@@ -17,7 +16,6 @@ import React, { useEffect, useState } from "react";
         setLoading(false);
       })
       .catch((err) => {
-        console.error("Error fetching bookings:", err);
         setLoading(false);
       });
   }, []);
@@ -27,7 +25,6 @@ import React, { useEffect, useState } from "react";
       method: "DELETE",
     })
       .then((res) => {
-        if (!res.ok) throw new Error("Failed to remove booking");
         return res.json();
       })
       .then(() => {
@@ -36,9 +33,6 @@ import React, { useEffect, useState } from "react";
           prevBookings.filter((booking) => booking.id !== id)
         );
       })
-      .catch((err) => {
-        console.error("Error removing booking:", err);
-      });
   };
 
   function handleFormChange(id, field, value){
@@ -54,7 +48,7 @@ import React, { useEffect, useState } from "react";
 function handleConfirm(booking){
     const form = formValues[booking.id]
     if(!form || !form.name || !form.email || !form.phone || !form.people){
-        alert("Please fill in all fields");
+        toast.error("Please fill in all fields.");
         return;
     }
 
@@ -77,11 +71,11 @@ function handleConfirm(booking){
         body: JSON.stringify(confirmedBooking),
     })
     .then((res) => {
-        if (!res.ok) throw new Error("Failed to confirm booking");
+       
         return res.json();
     })
     .then(() => {
-        alert("Booking confirmed!");
+        toast.success("Booking confirmed!");
         setBookings((prevBookings) =>
           prevBookings.filter((booking) => booking.id !== booking.id)
         );
@@ -121,7 +115,7 @@ function handleConfirm(booking){
                 <p className="text-gray-600 mt-2">Package: 3 Nights + Tour Guide</p>
                 <p className="text-purple-600 font-medium mt-2">Price Per Person: ${booking.price}</p>
 
-                {/* Booking Form */}
+               
                 <form className="mt-4 space-y-2">
                   <input
                     type="text"

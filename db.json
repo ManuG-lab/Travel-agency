@@ -283,12 +283,12 @@
   ],
   "bookings": [
     {
-      "id": "bba9",
-      "name": "Tokyo",
-      "country": "Japan",
-      "price": 1500,
-      "image": "https://images.pexels.com/photos/14095371/pexels-photo-14095371.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "description": "A bustling metropolis known for its modern architecture and rich history."
+      "id": "1e1f",
+      "name": "New York",
+      "country": "USA",
+      "price": 2000,
+      "image": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "The city that never sleeps, famous for its skyline and cultural diversity."
     }
   ],
   "admin": [
@@ -298,6 +298,26 @@
       "password": "admin123"
     }
   ],
-  "messeges": [],
-  "confirmed": []
+  "messeges": [
+    {
+      "id": "dc31",
+      "name": "James",
+      "email": "gmannu2055@gmail.com",
+      "message": "I would like to inquire about the tokyo package please"
+    }
+  ],
+  "confirmed": [
+    {
+      "id": "b597",
+      "name": "New York",
+      "email": "ggg@gggg",
+      "phone": "14254765321",
+      "people": 10,
+      "totalPrice": 20000,
+      "country": "USA",
+      "price": 2000,
+      "image": "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "The city that never sleeps, famous for its skyline and cultural diversity."
+    }
+  ]
 }

@@ -12,7 +12,7 @@ import React from "react";
               About Our Travel Agency
             </h2>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              At <span className="font-semibold text-purple-800">DreamEscape Travel</span>, we believe in crafting unforgettable experiences. 
+              At <span className="font-semibold text-purple-800">Escape Travel</span>, we believe in crafting unforgettable experiences. 
               Whether you're seeking a relaxing beach holiday, an adrenaline-fueled adventure, or a cultural city break, 
               we've got the perfect trip waiting for you.
             </p>

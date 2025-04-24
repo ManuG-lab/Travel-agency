@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
     <nav className="bg-purple-700 text-white py-4">
       <div className="container mx-auto flex justify-between items-center px-4">
         <div className="text-2xl font-bold">
-          <Link to="/" className="hover:text-gray-300">Travel Agency</Link>
+          <Link to="/" className="hover:text-gray-300">Escape Travel</Link>
         </div>
         
         <div className="space-x-6">

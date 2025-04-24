@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -29,14 +30,12 @@ function Contact() {
       });
 
       if (response.ok) {
-        alert("Message sent successfully!");
+        toast.success("Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        alert("Failed to send message.");
+        toast.error("Failed to send message.");
       }
-    } catch (error) {
-      console.error("Error submitting message:", error);
-      alert("Something went wrong.");
+    
     } finally {
       setLoading(false);
     }

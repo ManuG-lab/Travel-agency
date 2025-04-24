@@ -2,6 +2,7 @@ import React from "react";
 import PlaceCard from "../Components/PlaceCard";
 import { useState } from "react";
 import { useEffect } from "react";
+import { toast } from "react-toastify";
 
 function Destinations() {
     const [places, setPlaces] = useState([]);
@@ -10,11 +11,9 @@ function Destinations() {
       fetch("http://localhost:3000/destinations") // Your JSON server endpoint
         .then((res) => res.json())
         .then((data) => setPlaces(data))
-        .catch((err) => console.error("Failed to fetch places", err));
     }, []);
   
     const handleBook = (place) => {
-      alert(`You booked: ${place.name}`);
         const bookingData = {
             name: place.name,
             country: place.country,
@@ -31,13 +30,8 @@ function Destinations() {
         })
         .then((res) => res.json())
         .then((data) => {
-            alert("Booking successful!");
+            toast.success("Added to Bookings!");
         })
-        .catch((err) => {
-            console.error("Failed to book place", err);
-            alert("Booking failed. Please try again.");
-        });
-    
     };
   
     return (

@@ -38,14 +38,7 @@ import { useState } from "react";
           
         )}
 
-        <button
-          onClick={() => {
-            onBook(place);
-          }}
-          className="w-full bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800 transition"
-        >
-          Book Now
-        </button>
+        <button onClick={() => {onBook(place);}}className="w-full bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800 transition">Book Now</button>
       </div>
     </div>
   );
