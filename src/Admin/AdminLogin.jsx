@@ -18,7 +18,7 @@ function AdminLogin({setIsAdmin}){
             const admin = data.find((admin) => admin.username === username && admin.password === password)
             if(admin){
                 setIsAdmin(true)
-                navigate("/admin/admindashboard")
+                navigate("/admin/AdminDashboard")
                 toast.success("Login successful")
             }else{
                toast.error("Invalid username or password")

@@ -19,6 +19,9 @@ function AdminNavbar() {
             <li>
                 <Link to="/admin/EditDestination" className="hover:text-purple-300 transition">Edit Destination</Link>
             </li>
+            <li>
+            <Link to="/admin/Messages" className="hover:text-purple-300 transition">Messages</Link>
+          </li>
           <li>
             <Link to="/" className="hover:text-purple-300 transition">Back to Home</Link>
           </li>
