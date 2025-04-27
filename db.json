@@ -281,16 +281,7 @@
       "message": "Package inclusive of accomodation and tour guides."
     }
   ],
-  "bookings": [
-    {
-      "id": "f89c",
-      "name": "Paris",
-      "country": "France",
-      "price": 12000,
-      "image": "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "description": "The city of lights, known for its art, fashion, and culture."
-    }
-  ],
+  "bookings": [],
   "admin": [
     {
       "id": "1",
