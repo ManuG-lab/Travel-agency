@@ -3,7 +3,6 @@ import { ToastContainer } from "react-toastify";
 import { BrowserRouter, Routes, Route  } from "react-router-dom";
 import { useState } from "react";
 import Landing from "./Pages/Landing";
-import Navbar from "./Components/NavBar";
 import Bookings from "./Pages/Bookings";
 import Contact from "./Pages/Contact";
 import About from "./Pages/About";
@@ -25,7 +24,6 @@ const [isAdmin, setIsAdmin] = useState(false);
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
-       
         <Route path="/destinations" element={<Destinations />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
