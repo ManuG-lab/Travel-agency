@@ -16,6 +16,7 @@ import AdminNavbar from "./Admin/AdminNavBar";
 import AddDestination from "./Admin/AddDestination";
 import EditDestination from "./Admin/EditDestination";
 import ManageBookings from "./Admin/ManageBookings";
+import Messages from "./Admin/Messages";
 
 function App(){
 const [isAdmin, setIsAdmin] = useState(false);
@@ -35,6 +36,7 @@ const [isAdmin, setIsAdmin] = useState(false);
         <Route path="/admin/AddDestination" element={ <AdminRoute isAdmin={isAdmin}> <AddDestination/> </AdminRoute> } />
         <Route path="/admin/ManageBookings" element={ <AdminRoute isAdmin={isAdmin}> <ManageBookings/> </AdminRoute> } />
         <Route path="/admin/EditDestination" element={ <AdminRoute isAdmin={isAdmin}> <EditDestination/> </AdminRoute> } />
+        <Route path="/admin/messages" element={<AdminRoute isAdmin={isAdmin}> <Messages /> </AdminRoute>} />
 
       </Routes>
       <Footer />

@@ -306,30 +306,5 @@
       "message": "I would like to inquire about the tokyo package please"
     }
   ],
-  "confirmed": [
-    {
-      "id": "f89c",
-      "name": "Paris",
-      "email": "Moses@gmail",
-      "phone": "2223334564",
-      "people": 5,
-      "totalPrice": 60000,
-      "country": "France",
-      "price": 12000,
-      "image": "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "description": "The city of lights, known for its art, fashion, and culture."
-    },
-    {
-      "id": "f89c",
-      "name": "Paris",
-      "email": "sdfghj@fghbnm.com",
-      "phone": "0987543456",
-      "people": 1,
-      "totalPrice": 12000,
-      "country": "France",
-      "price": 12000,
-      "image": "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "description": "The city of lights, known for its art, fashion, and culture."
-    }
-  ]
+  "confirmed": []
 }
